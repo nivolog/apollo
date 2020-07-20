@@ -72,21 +72,21 @@ ErrorCode LexusController::Init(
   accel_cmd_100_ = dynamic_cast<Accelcmd100*>(
       message_manager_->GetMutableProtocolDataById(Accelcmd100::ID));
   if (accel_cmd_100_ == nullptr) {
-    AERROR << "Accelcmd100 does not exist in the LexusMessalexusanager!";
+    AERROR << "Accelcmd100 does not exist in the LexusMessageManager!";
     return ErrorCode::CANBUS_ERROR;
   }
 
   brake_cmd_104_ = dynamic_cast<Brakecmd104*>(
       message_manager_->GetMutableProtocolDataById(Brakecmd104::ID));
   if (brake_cmd_104_ == nullptr) {
-    AERROR << "Brakecmd104 does not exist in the LexusMessalexusanager!";
+    AERROR << "Brakecmd104 does not exist in the LexusMessageManager!";
     return ErrorCode::CANBUS_ERROR;
   }
 
   shift_cmd_128_ = dynamic_cast<Shiftcmd128*>(
       message_manager_->GetMutableProtocolDataById(Shiftcmd128::ID));
   if (shift_cmd_128_ == nullptr) {
-    AERROR << "Shiftcmd128 does not exist in the LexusMessalexusanager!";
+    AERROR << "Shiftcmd128 does not exist in the LexusMessageManager!";
     return ErrorCode::CANBUS_ERROR;
   }
 
